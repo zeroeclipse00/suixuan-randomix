@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.Suixuan" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">#F7F5F0</item>
+        <item name="android:colorAccent">#275C45</item>
+    </style>
+</resources>

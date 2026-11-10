@@ -15,6 +15,7 @@
 /recordings/
 /tmp/
 /temp/
+/.local-tools/
 *.log
 *.mp4
 *.mov

@@ -2,7 +2,7 @@
 
 基于 AppForge `RandomixDecisionMaker` 选题设计的离线随机决策工具箱，计划提供转盘、硬币、骰子、灵感球、字母抽取、情境模板和历史记录。
 
-**当前处于方案阶段：已有分主题需求与设计文档，以及开发记录工具；Android 工程和 App 功能尚未实现。**
+**当前已有可构建运行的 Android 框架：共享领域与 Room 数据层、转盘和历史最小流程已验证；其他工具保留独立待开发页面，便于组员继续分工。**
 
 ## 文档导航
 
@@ -14,6 +14,9 @@
 | [模块任务](docs/modules.md) | 每个模块要实现什么、依赖什么、如何完成 |
 | [UI 与交互](docs/ui-design.md) | 页面、导航、视觉和异常状态 |
 | [实施阶段](docs/implementation.md) | 按依赖组织工作，不设时间任务表 |
+| [开发环境搭建](docs/development-environment.md) | 组员从干净克隆配置 JDK/SDK、构建、测试与设备排查 |
+| [框架交接](docs/handoff.md) | 当前功能边界、组员任务包、共享接口与接手步骤 |
+| [框架验证结果](docs/testing/framework-results.md) | 本轮实际构建、26 个 JVM 测试、10 个设备测试与限制 |
 | [测试与验收](docs/testing/acceptance.md) | 需求对应测试、关键场景与通过条件 |
 | [公开过程记录](docs/process/README.md) | 已完成工作、Token 口径与隐私边界 |
 
@@ -21,7 +24,17 @@
 
 Kotlin、Jetpack Compose、Material 3、ViewModel 和 Room。具体依赖版本将在环境核验与工程建立阶段固定。
 
-应用主要功能计划离线运行；首次构建需要的依赖下载条件将在工程创建后记录。
+当前转盘和历史无需联网；首次构建需下载官方依赖，网络与缓存配置见开发环境文档。
+
+## 运行框架
+
+按开发环境文档配置 JDK/SDK 后，Windows 可运行：
+
+```powershell
+.\scripts\android.ps1 :app:testDebugUnitTest :app:assembleDebug
+```
+
+macOS/Linux 使用 `./gradlew :app:testDebugUnitTest :app:assembleDebug`。Debug APK 位于 `app/build/outputs/apk/debug/app-debug.apk`。连接设备后再运行 `:app:connectedDebugAndroidTest`，详细步骤见开发环境文档。
 
 ## 开发轨迹与隐私
 
