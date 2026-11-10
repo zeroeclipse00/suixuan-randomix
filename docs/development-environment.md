@@ -172,7 +172,7 @@ adb shell am start -n com.suixuan.app/.MainActivity
 | 模拟器黑屏/图形异常 | 先核对镜像与 CPU 架构，重启 AVD，按官方文档尝试合适图形模式；不要清除用户数据作为未说明的默认修复 |
 | adb 找不到设备 | 确认 SDK 下同一套 adb、USB 授权/驱动和模拟器开机状态；多设备明确目标，查看 `adb devices` 原因 |
 | 依赖升级/IDE建议与仓库不同 | 先按固定版本复现，记录警告或失败；版本变更作为独立任务同时更新配置、验证和文档 |
-| GitHub CI 提示找不到 `tools` 包 | `setup-android@v3` 的旧默认值包含退役包；显式设置 `packages: platform-tools`，再安装项目指定的平台与 Build Tools。当前工作流已这样配置 |
+| GitHub CI 提示找不到 `tools` 包 | 旧 `setup-android@v3` 默认值包含退役包。当前流程已移除该 action，直接使用固定 Ubuntu 24.04 的预装 SDK；用 JDK 21 安装明确所需的包，再切 JDK 17 构建，不请求退役包 |
 
 虚拟化/图形支持取决于实际硬件，参考 [Android Emulator 加速官方文档](https://developer.android.com/studio/run/emulator-acceleration)。不要因为一台模拟器启动失败而把 JVM 单测或已成功构建的 APK 描述为未生成，也不要反过来用构建成功代替设备检查。
 

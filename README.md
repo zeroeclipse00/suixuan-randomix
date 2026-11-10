@@ -1,5 +1,7 @@
 # 随选 Suixuan
 
+[![Android framework checks](https://github.com/zeroeclipse00/suixuan-randomix/actions/workflows/android.yml/badge.svg)](https://github.com/zeroeclipse00/suixuan-randomix/actions/workflows/android.yml)
+
 基于 AppForge `RandomixDecisionMaker` 选题设计的离线随机决策工具箱，计划提供转盘、硬币、骰子、灵感球、字母抽取、情境模板和历史记录。
 
 **当前已有可构建运行的 Android 框架：共享领域与 Room 数据层、转盘和历史最小流程已验证；其他工具保留独立待开发页面，便于组员继续分工。**
