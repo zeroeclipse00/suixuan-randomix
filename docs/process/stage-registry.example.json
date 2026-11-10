@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "root_thread_id": "REPLACE_WITH_LOCAL_THREAD_ID",
+  "tracking_start": {
+    "timestamp_utc": "REPLACE_WITH_TRACKING_START_UTC",
+    "root_turn_id": "REPLACE_WITH_FIRST_ROOT_TURN_ID",
+    "user_message_prefix": "REPLACE_WITH_FIRST_USER_MESSAGE_PREFIX"
+  },
+  "stages": {
+    "ST-00": "需求方案与记录机制",
+    "ST-01": "环境与UI设计",
+    "ST-02": "领域模型与随机引擎",
+    "ST-03": "转盘完整流程",
+    "ST-04": "其他工具",
+    "ST-05": "模板历史与设置整合",
+    "ST-06": "测试修复与可选增强",
+    "ST-07": "复现交付"
+  },
+  "turn_stages": {
+    "REPLACE_WITH_FIRST_ROOT_TURN_ID": {
+      "stage_id": "ST-00",
+      "work_id": "VC-0001"
+    }
+  }
+}
